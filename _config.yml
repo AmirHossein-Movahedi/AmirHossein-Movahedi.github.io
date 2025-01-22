@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "AmirHossein Moavedi Dehnavi"
+title                    : "AmirHossein Moavedi"
 title_separator          : "-"
 name                     : &name "AmirHossein Movahedi"
 description              : &description "personal description"
@@ -22,11 +22,11 @@ repository               : "AmirHossein-Movahedi/AmirHossein-Movahedi.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "AmirHossein Movahedi Dehnavi"
+  name             : "AmirHossein Movahedi"
   pronouns         : # example: "she/her"  
-  bio              : "Physics student>>31 Mar, 2002"
+  bio              : "Physics student>>DOB:31 Mar, 2002"
   location         : "IRAN"
-  employer         : "SUT"
+  employer         : "Sharif University of Technology"
   uri              : # URL
   email            : "movahedi.amirhossien@gmail.com" 
 
@@ -44,7 +44,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "AmirHossein-Movahedi"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
