@@ -1,0 +1,865 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const withBase = (path) => `${base}${path}`;
+---
+
+<Layout title="AmirHossein Movahedi">
+	<main class="page">
+		<header class="hero">
+			<div class="hero-text">
+				<p class="eyebrow">--- Bio ---</p>
+				<h1>Amir Hossein Movahedi</h1>
+				<p class="lead">
+					I am interested in complex system and neuroscience, and I also pasianate about the 
+					The graph theory. I crious about the Brian, how it is work and How can we model it.
+				</p>
+				<div class="cta-row">
+					<a class="cta primary" href={withBase('/about')}>More</a>
+					<!-- <a class="cta ghost" href={withBase('/contact')}>Contact</a> -->
+				</div>
+				<div class="meta">
+					<span>Tehran, Iran</span>
+					<span>Open to remote & hybrid roles</span>
+				</div>
+			</div>
+			<div class="hero-card">
+				<div class="card-inner">
+					<p class="card-title">Current Focus</p>
+					<ul>
+						<li>Neuroscienc (EEG channel)</li>
+						<li>Reinforcement Learning</li>
+						<li>LLM</li>
+					</ul>
+					<div class="card-footer">
+						<span class="pill"><a href="mailto:Movahedi.amirhossein@gmail.com">Send Email</a></span>					</div>
+				</div>
+			</div>
+		</header>
+
+
+
+<!-- projects section in the index page -->
+		<!-- <section class="section">
+			<div class="section-heading">
+				<h2>Some Projects</h2>
+				<a class="pill" href={withBase('/project')}>
+					<p>For more information  and Project click.</p>
+				</a>
+				 <p>For more information click. href={withBase('/project')} </p> -->
+			<!-- </div>
+			<div class="grid">
+				<a class="nav-card" href={withBase('/project')}>
+					<h3>Get genomics with shapllay value</h3>
+					<p>Dr.Lalah haghverdi</p>
+				</a>
+				<a class="nav-card" href={withBase('/project')}>
+					<h3>Project</h3>
+					<p>Highlighted case studies and outcomes.</p>
+				</a>
+			</div>
+		</section> --> 
+		<section class="section" id="projects">
+			<div class="section-heading">
+				<h2>Selected Projects</h2>
+				<p>Work that blends product thinking, performance, and polish.</p>
+			</div>
+			<div class="grid">
+				<article class="project">
+					<h3>Gene network distractor</h3>
+					<p>
+						We work on the requlary gene network to construct the for the
+						Shaply value.
+					</p>
+					<div class="tags">
+						<span>python</span>
+						<span>R</span>
+						<span>Big DATA</span>
+					</div>
+				</article>
+				<article class="project">
+					<h3>EEG channel data</h3>
+					<p>
+						Modeling the barin network with used the EEG channel.
+					</p>
+					<div class="tags">
+						<span>Complex System</span>
+						<span>Python</span>
+						<span>R</span>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<!-- <section class="section" id="about">
+			<div class="section-heading">
+				<h2>About</h2>
+				<p>Short, sharp background that tells your story.</p>
+			</div>
+			<div class="about-card">
+				<p>
+					I’m a product-minded engineer who bridges design and engineering to ship
+					memorable digital experiences. I focus on performance, accessibility, and
+					teams that care about craft.
+				</p>
+				<div class="about-stats">
+					<div>
+						<h3>8+ years</h3>
+						<p>Building web products</p>
+					</div>
+					<div>
+						<h3>35+</h3>
+						<p>Projects shipped</p>
+					</div>
+					<div>
+						<h3>12</h3>
+						<p>Design systems delivered</p>
+					</div>
+				</div>
+			</div>
+		</section> -->
+
+		<!-- ========== NEW: COMPLEX SYSTEM DYNAMICS (TOY GRAPH) ========== -->
+		<section class="section viz-section">
+			<div class="section-heading">
+				<h2>Complex System Dynamics</h2>
+				<p>A playful interactive network – move your mouse, watch the nodes dance.</p>
+			</div>
+			<div class="canvas-container">
+				<canvas id="toyCanvas" width="auto" height="auto" style="width:100%; height:auto; background: radial-gradient(circle at 30% 20%, #fff5ea, #f5ede2); border-radius: var(--radius); border:1px solid var(--line); cursor: crosshair;"></canvas>
+			</div>
+			<p class="viz-caption">✦ Move your mouse over the canvas – nodes are attracted to it! ✦</p>
+		</section>
+
+		
+
+
+		<!-- <section class="section" id="experience">
+			<div class="section-heading">
+				<h2>Experience</h2>
+				<p>Recent roles where I shipped products and scaled systems.</p>
+			</div>
+			<div class="timeline">
+				<div class="role">
+					<div>
+						<h3>Lead Frontend Engineer</h3>
+						<p class="sub">Nova Labs • 2022 — Present</p>
+					</div>
+					<p>
+						Built a shared component library, leading to 42% faster feature delivery
+						across three squads.
+					</p>
+				</div>
+				<div class="role">
+					<div>
+						<h3>Product Engineer</h3>
+						<p class="sub">Cedar Studio • 2020 — 2022</p>
+					</div>
+					<p>
+						Launched multi-tenant analytics tooling and revamped onboarding with a 25%
+						conversion lift.
+					</p>
+				</div>
+			</div>
+		</section> -->
+
+		<section class="section split" id="contact">
+			<!-- <div>
+				<h2>Let’s Build Something</h2>
+				<p>
+					If you want a crisp, fast, and memorable web presence, I can help. Reach
+					out for collaborations, consulting, or full-time roles.
+				</p>
+			</div> -->
+			<div class="contact-card">
+				<a class="cta primary" href="mailto:Moavhedi.amirhossien@gmail.com">Movahedi.AmirHossein@gmail.com</a>
+				<div class="contact-links">
+					<a href="https://github.com/your-handle">GitHub</a>
+					<a href="https://www.linkedin.com/in/your-handle">LinkedIn</a>
+					<!-- <a href="https://x.com/your-handle">X</a> -->
+				</div>
+				<!-- <p class="small">Replace placeholders with your real links.</p> -->
+			</div>
+		</section>
+
+		<!-- <section class="section" id="note">
+			<div class="section-heading">
+				<h2>Note</h2>
+				<p>Note is the homework or the question that is interested for me.</p>
+			</div>
+			<div class="grid">
+				<article class="project">
+					<h3>Type Playground</h3>
+					<p>Exploring expressive typography and grid systems for landing pages.</p>
+					<div class="tags">
+						<span>Typography</span>
+						<span>Layout</span>
+						<span>CSS</span>
+					</div>
+				</article>
+				<article class="project">
+					<h3>Motion Studies</h3>
+					<p>Micro-interactions focused on accessibility and compositing performance.</p>
+					<div class="tags">
+						<span>Motion</span>
+						<span>UX</span>
+						<span>Keyframes</span>
+					</div>
+				</article>
+				<article class="project">
+					<h3>Component Lab</h3>
+					<p>Reusable UI components built to be skinnable and themeable.</p>
+					<div class="tags">
+						<span>Design System</span>
+						<span>Tokens</span>
+						<span>Storybook</span>
+					</div>
+				</article>
+			</div>
+		</section> -->
+
+
+		<!-- The counter of viewer -->
+		<section>
+			<div><center>
+				<p><center>Viewer Count</center></p>
+				<h3 id="viewer-count">0</h3>
+			</center></div>
+			<!-- <div class="stat">
+				<p>Button Clicks</p>
+				<h3 id="click-count">0</h3>
+			</div> -->
+			<!-- <button class="count-btn" id="count-btn" type="button">
+				<span>Count Button</span>
+				<span class="count-pill">+</span>
+			</button> -->
+		</section>
+	</main>
+</Layout>
+
+
+
+
+
+
+
+<!-- <style>
+	.page {
+		padding: 40px 6vw 120px;
+		display: flex;
+		flex-direction: column;
+		gap: 90px;
+	}
+
+	.hero {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 48px;
+		align-items: center;
+		position: relative;
+	}
+
+	.hero-text h1 {
+		font-family: var(--font-serif);
+		font-size: clamp(3rem, 5vw, 4.8rem);
+		margin: 14px 0 16px;
+		letter-spacing: -0.02em;
+	}
+
+	.eyebrow {
+		text-transform: uppercase;
+		letter-spacing: 0.25em;
+		font-size: 0.78rem;
+		color: var(--accent-deep);
+		font-weight: 600;
+	}
+
+	.lead {
+		font-size: 1.2rem;
+		color: var(--ink-muted);
+		max-width: 36rem;
+	}
+
+	.cta-row {
+		display: flex;
+		gap: 16px;
+		margin: 28px 0 18px;
+		flex-wrap: wrap;
+	}
+
+	.cta {
+		padding: 12px 22px;
+		border-radius: 999px;
+		border: 1px solid var(--line);
+		font-weight: 600;
+	}
+
+	.cta.primary {
+		background: var(--ink);
+		color: white;
+		box-shadow: var(--shadow);
+	}
+
+	.cta.ghost {
+		background: transparent;
+		color: var(--ink);
+	}
+
+	.meta {
+		display: flex;
+		gap: 16px;
+		flex-wrap: wrap;
+		color: var(--ink-muted);
+		font-size: 0.95rem;
+	}
+
+	.hero-card {
+		background: linear-gradient(140deg, #fff7ee 0%, #fff 45%, #f7ebe0 100%);
+		border-radius: var(--radius);
+		padding: 26px;
+		box-shadow: var(--shadow);
+		position: relative;
+		overflow: hidden;
+		animation: floatIn 0.9s ease-out both;
+	}
+
+	.hero-card::after {
+		content: '';
+		position: absolute;
+		right: -40%;
+		top: -40%;
+		width: 260px;
+		height: 260px;
+		background: radial-gradient(circle, rgba(217, 106, 58, 0.3), transparent 70%);
+	}
+
+	.card-inner {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.card-title {
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		font-size: 0.78rem;
+	}
+
+	.hero-card ul {
+		margin: 0;
+		padding-left: 18px;
+		color: var(--ink-muted);
+	}
+
+	.card-footer {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		font-size: 0.9rem;
+		color: var(--ink-muted);
+	}
+
+	.pill {
+		background: var(--accent);
+		color: white;
+		padding: 6px 14px;
+		border-radius: 999px;
+		font-size: 0.85rem;
+		transition: transform 0.3s ease;
+		display: inline-block;
+	}
+	.pill a {
+		color: white;
+		text-decoration: none;
+	}
+
+	.pill a:visited,
+	.pill a:hover,
+	.pill a:active {
+		color: white;
+	}
+
+	.pill:hover {
+		transform: scale(1.1);
+		cursor: pointer;
+	}
+
+	.section {
+		display: grid;
+		gap: 36px;
+	}
+
+	.section-heading h2 {
+		font-family: var(--font-serif);
+		font-size: clamp(2rem, 4vw, 2.8rem);
+		margin: 0 0 10px;
+	}
+
+	.section-heading p {
+		margin: 0;
+		color: var(--ink-muted);
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+		gap: 20px;
+	}
+
+	.nav-card {
+		background: rgba(255, 255, 255, 0.9);
+		border: 1px solid var(--line);
+		padding: 22px;
+		border-radius: 18px;
+		transition: transform 0.25s ease, box-shadow 0.25s ease;
+		display: grid;
+		gap: 10px;
+	}
+
+	.nav-card:hover {
+		transform: translateY(-6px);
+		box-shadow: 0 16px 40px rgba(16, 17, 20, 0.12);
+	}
+
+	.nav-card p {
+		margin: 0;
+		color: var(--ink-muted);
+	}
+
+	.stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+		gap: 18px;
+		align-items: center;
+		background: rgba(255, 255, 255, 0.7);
+		border: 1px solid var(--line);
+		padding: 24px;
+		border-radius: 20px;
+		box-shadow: 0 12px 30px rgba(16, 17, 20, 0.08);
+	}
+
+	.stat {
+		display: grid;
+		gap: 6px;
+	}
+
+	.stat p {
+		margin: 0;
+		color: var(--ink-muted);
+		font-size: 0.92rem;
+	}
+
+	.stat h3 {
+		margin: 0;
+		font-size: 2rem;
+		font-family: var(--font-serif);
+	}
+
+	.count-btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 16px;
+		padding: 14px 22px;
+		border-radius: 999px;
+		border: none;
+		background: var(--ink);
+		color: white;
+		font-weight: 600;
+		cursor: pointer;
+		box-shadow: 0 18px 40px rgba(16, 17, 20, 0.18);
+	}
+
+	.count-pill {
+		width: 28px;
+		height: 28px;
+		border-radius: 50%;
+		background: var(--accent);
+		display: grid;
+		place-items: center;
+		font-weight: 700;
+	}
+
+	.about-card {
+		background: rgba(255, 255, 255, 0.85);
+		border-radius: var(--radius);
+		padding: 28px;
+		border: 1px solid var(--line);
+		display: grid;
+		gap: 24px;
+		box-shadow: 0 18px 40px rgba(16, 17, 20, 0.08);
+	}
+
+	.about-stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+		gap: 16px;
+	}
+
+	.about-stats h3 {
+		margin: 0 0 6px;
+		font-size: 1.4rem;
+	}
+
+	.about-stats p {
+		margin: 0;
+		color: var(--ink-muted);
+		font-size: 0.9rem;
+	}
+
+	.project {
+		background: var(--card);
+		border: 1px solid var(--line);
+		padding: 24px;
+		border-radius: 18px;
+		box-shadow: 0 10px 30px rgba(16, 17, 20, 0.08);
+		transition: transform 0.25s ease, box-shadow 0.25s ease;
+	}
+
+	.project:hover {
+		transform: translateY(-6px);
+		box-shadow: 0 16px 40px rgba(16, 17, 20, 0.14);
+	}
+
+	.project h3 {
+		margin: 0 0 8px;
+	}
+
+	.tags {
+		display: flex;
+		gap: 8px;
+		flex-wrap: wrap;
+		margin-top: 16px;
+	}
+
+	.tags span {
+		padding: 6px 12px;
+		border-radius: 999px;
+		background: #f7f3ed;
+		font-size: 0.82rem;
+	}
+
+	.timeline {
+		display: grid;
+		gap: 18px;
+	}
+
+	.role {
+		padding: 20px 24px;
+		border-radius: 18px;
+		border: 1px solid var(--line);
+		background: rgba(255, 255, 255, 0.75);
+		display: grid;
+		gap: 12px;
+	}
+
+	.sub {
+		margin: 4px 0 0;
+		color: var(--ink-muted);
+		font-size: 0.95rem;
+	}
+
+	.split {
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		align-items: center;
+	}
+
+	.contact-card {
+		background: var(--ink);
+		color: white;
+		border-radius: var(--radius);
+		padding: 26px;
+		display: grid;
+		gap: 16px;
+	}
+
+	.contact-card .cta {
+		justify-self: start;
+	}
+
+	.contact-links {
+		display: flex;
+		gap: 14px;
+		flex-wrap: wrap;
+	}
+
+	.contact-links a {
+		color: #f4d9c6;
+		font-weight: 600;
+	}
+
+	.small {
+		font-size: 0.85rem;
+		color: rgba(255, 255, 255, 0.6);
+	}
+
+	/* ========== NEW STYLES FOR THE GRAPH ========== */
+	.viz-section {
+		gap: 20px;
+	}
+	.canvas-container {
+		width: 100%;
+		overflow-x: auto;
+	}
+	#toyCanvas {
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		height: auto;
+		min-height: 400px;
+		background: radial-gradient(circle at 30% 20%, #fff5ea, #f5ede2);
+	}
+	.viz-caption {
+		text-align: center;
+		font-size: 0.9rem;
+		color: var(--accent);
+		font-weight: 500;
+		margin-top: 12px;
+	}
+
+	@keyframes floatIn {
+		from {
+			transform: translateY(20px);
+			opacity: 0;
+		}
+		to {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	@media (max-width: 720px) {
+		.page {
+			padding: 56px 7vw 90px;
+			gap: 80px;
+		}
+
+		.hero-card {
+			order: -1;
+		}
+	}
+</style> -->
+
+
+<script is:inline>
+	const viewerKey = 'resume_viewer_count';
+	const clickKey = 'resume_click_count';
+
+	const getNumber = (key) => Number.parseInt(localStorage.getItem(key) ?? '0', 10);
+	const setNumber = (key, value) => localStorage.setItem(key, String(value));
+
+	const viewerCountEl = document.getElementById('viewer-count');
+	const clickCountEl = document.getElementById('click-count');
+	const countButton = document.getElementById('count-btn');
+
+	const viewerCount = getNumber(viewerKey) + 1;
+	setNumber(viewerKey, viewerCount);
+	if (viewerCountEl) viewerCountEl.textContent = String(viewerCount);
+
+	const clickCount = getNumber(clickKey);
+	if (clickCountEl) clickCountEl.textContent = String(clickCount);
+
+	if (countButton) {
+		countButton.addEventListener('click', () => {
+			const nextCount = getNumber(clickKey) + 1;
+			setNumber(clickKey, nextCount);
+			if (clickCountEl) clickCountEl.textContent = String(nextCount);
+		});
+	}
+</script>
+
+
+
+
+
+
+<script is:inline>
+	// ---------- TOY GRAPH: COLORFUL NODES, MOUSE ATTRACTION, NO TEXT ----------
+	const canvas = document.getElementById('toyCanvas');
+	const ctx = canvas.getContext('2d');
+
+	function resizeCanvas() {
+		const container = canvas.parentElement;
+		const width = container.clientWidth;
+		canvas.width = width;
+		canvas.height = Math.min(600, width * 0.5);
+	}
+	resizeCanvas();
+	window.addEventListener('resize', resizeCanvas);
+
+	const NODE_COUNT = 24;
+	let nodes = [];
+
+	// Random edges (about 12% density)
+	const edges = [];
+	for (let i = 0; i < NODE_COUNT; i++) {
+		for (let j = i+1; j < NODE_COUNT; j++) {
+			if (Math.random() < 0.12) edges.push([i, j]);
+		}
+	}
+	// Ensure node 0 is central
+	for (let i = 1; i < 5; i++) {
+		if (!edges.some(e => (e[0]==0 && e[1]==i) || (e[0]==i && e[1]==0))) {
+			edges.push([0, i]);
+		}
+	}
+
+	const nodeRadius = 5;
+
+	function initNodes() {
+		const w = canvas.width;
+		const h = canvas.height;
+		nodes = [];
+		for (let i = 0; i < NODE_COUNT; i++) {
+			nodes.push({
+				x: 80 + Math.random() * (w - 160),
+				y: 60 + Math.random() * (h - 120),
+				vx: (Math.random() - 0.5) * 0.8,
+				vy: (Math.random() - 0.5) * 0.8,
+				// color: `hsl(${ (i * 25) % 360 }, 70%, 60%)`
+				color:`rgb(100, 0, 0)`
+			});
+		}
+	}
+
+	let mouseX = canvas.width/2, mouseY = canvas.height/2;
+	let mouseActive = false;
+
+	canvas.addEventListener('mousemove', (e) => {
+		const rect = canvas.getBoundingClientRect();
+		const scaleX = canvas.width / rect.width;
+		const scaleY = canvas.height / rect.height;
+		mouseX = (e.clientX - rect.left) * scaleX;
+		mouseY = (e.clientY - rect.top) * scaleY;
+		mouseActive = true;
+	});
+	canvas.addEventListener('mouseleave', () => { mouseActive = false; });
+
+	function applyForces() {
+		const REPULSION = 400;
+		const ATTRACTION = 0.02;
+		const MOUSE_FORCE = 0.4;
+		const DAMP = 0.94;
+		const MAX_VEL = 3.5;
+
+		for (let i = 0; i < nodes.length; i++) {
+			let fx = 0, fy = 0;
+			const n1 = nodes[i];
+
+			// Repulsion
+			for (let j = 0; j < nodes.length; j++) {
+				if (i === j) continue;
+				const n2 = nodes[j];
+				const dx = n1.x - n2.x;
+				const dy = n1.y - n2.y;
+				const distSq = dx*dx + dy*dy + 0.5;
+				const force = REPULSION / distSq;
+				const angle = Math.atan2(dy, dx);
+				fx += Math.cos(angle) * force;
+				fy += Math.sin(angle) * force;
+			}
+
+			// Spring edges
+			for (let e of edges) {
+				let a = nodes[e[0]];
+				let b = nodes[e[1]];
+				let dx = a.x - b.x, dy = a.y - b.y;
+				let dist = Math.hypot(dx, dy);
+				let ideal = 130;
+				let stretch = (dist - ideal) * ATTRACTION;
+				let angle = Math.atan2(dy, dx);
+				let strX = Math.cos(angle) * stretch;
+				let strY = Math.sin(angle) * stretch;
+				if (e[0] === i) { fx -= strX; fy -= strY; }
+				if (e[1] === i) { fx += strX; fy += strY; }
+			}
+
+			// Mouse attraction
+			if (mouseActive) {
+				let dx = n1.x - mouseX;
+				let dy = n1.y - mouseY;
+				let dist = Math.hypot(dx, dy);
+				if (dist < 180) {
+					let angle = Math.atan2(dy, dx);
+					let force = (180 - dist) / 180 * MOUSE_FORCE;
+					fx += Math.cos(angle) * force;
+					fy += Math.sin(angle) * force;
+				}
+			}
+
+			n1.vx = (n1.vx + fx) * DAMP;
+			n1.vy = (n1.vy + fy) * DAMP;
+			let vMag = Math.hypot(n1.vx, n1.vy);
+			if (vMag > MAX_VEL) {
+				n1.vx = (n1.vx / vMag) * MAX_VEL;
+				n1.vy = (n1.vy / vMag) * MAX_VEL;
+			}
+			n1.x += n1.vx;
+			n1.y += n1.vy;
+
+			const margin = nodeRadius + 8;
+			if (n1.x < margin) { n1.x = margin; n1.vx *= -0.6; }
+			if (n1.x > canvas.width - margin) { n1.x = canvas.width - margin; n1.vx *= -0.6; }
+			if (n1.y < margin) { n1.y = margin; n1.vy *= -0.6; }
+			if (n1.y > canvas.height - margin) { n1.y = canvas.height - margin; n1.vy *= -0.6; }
+		}
+	}
+
+	function draw() {
+		if (!ctx) return;
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+		// Draw edges
+		for (let e of edges) {
+			const a = nodes[e[0]];
+			const b = nodes[e[1]];
+			ctx.beginPath();
+			ctx.moveTo(a.x, a.y);
+			ctx.lineTo(b.x, b.y);
+			ctx.strokeStyle = `rgba(1, 1, 1, 0.45)`;
+			ctx.lineWidth = 2;
+			ctx.shadowBlur = 5;
+			// ctx.shadowColor = '#d96a3a';
+			ctx.stroke();
+		}
+		ctx.shadowBlur = 0;
+
+		// Draw colorful nodes
+		for (let n of nodes) {
+			ctx.beginPath();
+			ctx.arc(n.x, n.y, nodeRadius, 0, Math.PI*2);
+			ctx.fillStyle = n.color;
+			ctx.shadowBlur = 10;
+			// ctx.shadowColor = 'rgba(0,0,0,0.2)';
+			ctx.fill();
+			// Inner glow
+			ctx.beginPath();
+			ctx.arc(n.x, n.y, nodeRadius-2, 0, Math.PI*2);
+			// ctx.fillStyle = 'rgba(255,255,200,0.3)';
+			ctx.fill();
+		}
+		ctx.shadowBlur = 0;
+	}
+
+	function animate() {
+		applyForces();
+		draw();
+		requestAnimationFrame(animate);
+	}
+
+	function setup() {
+		resizeCanvas();
+		initNodes();
+		window.addEventListener('resize', () => {
+			resizeCanvas();
+			initNodes();
+		});
+		animate();
+	}
+
+	setup();
+</script>

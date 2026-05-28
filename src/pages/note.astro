@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Notes | Your Name">
+  <h1>📝 Notes & downloads</h1>
+  <p>In this part you can see the Note that I want to share, also you can 
+    download it.
+  </p>
+
+  <div class="card">
+    <h2>📄 The Problem That solve in stochastic process</h2>
+    <p>
+     <!-- <a href="/linearalg.pdf" class="download-link" target="_blank">Download the PDF (resume / notes)</a> -->
+     <li><a href="/linearalg.pdf" class="download-link">HW1</a></li>
+     <p><small>PDF, 240 KB</small></p>
+    </p>
+    <p>
+      <!-- <a href="/linearalg.pdf" class="download-link" target="_blank">Download the PDF (resume / notes)</a> -->
+      <li><a href="/linearalg.pdf" class="download-link">HW2</a></li>
+      <p><small>PDF, 240 KB</small></p>
+     </p>
+  </div>
+
+
+  <div class="card">
+    <h2>📄 The Problem That solve in Quantum Information <small>(Farsi)</small></h2>
+    <p>
+     <!-- <a href="/linearalg.pdf" class="download-link" target="_blank">Download the PDF (resume / notes)</a> -->
+     <li><a href="/linearalg.pdf" class="download-link">HW1</a></li>
+     <p><small>PDF, 240 KB</small></p>
+    </p>
+    <p>
+      <!-- <a href="/linearalg.pdf" class="download-link" target="_blank">Download the PDF (resume / notes)</a> -->
+      <li><a href="/linearalg.pdf" class="download-link">HW2</a></li>
+      <p><small>PDF, 240 KB</small></p>
+     </p>
+  </div>
+
+</Layout>
+
+
+
+<style>
+  .download-link {
+    display: inline-block;
+    background: var(--accent);
+    color: wheat;
+    padding: 8px 16px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+  .download-link:hover {
+    color: white;
+    text-decoration: underline;
+  }
+</style>
+

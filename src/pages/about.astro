@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About — Your Name", seo={{
+	title: "About Me",
+	description: "Learn about my background, interests in complex systems and neuroscience.",
+	// image: "/images/profile.jpg", // optional
+	}}>
+	<main class="page">
+		<section class="section">
+			<div class="section-heading">
+				<h1>About</h1>
+				<p>I am AmirHossein Movahedi. I was worn in March 31, 2002 in Isfahan (the half of world) The one of the large cities in Iran, I study physics
+					at university. I took the bachlor dgree from Isfahan university of technology (rank 3th among the 60). For my journy of acadmic of life I be one of the five bachlor student that get the offer that go to Sharif
+					university of technology to study the master, in master dgree I realy intersted in Complex system and The humman brain.
+					Therefore, My master thises about the brain modelling.
+				</p>
+
+	
+				<p>I love play card because that I think, the advance theory of probability 
+					behind it. The time series is one of the my intested thing that I want to work on it.
+				</p>
+			</div>
+			<div class="about-card">
+				<p>
+					The Table of my skill
+				</p>
+				<div class="about-stats">
+					<div>
+						<h3>5+ years</h3>
+						<p>Python</p>
+					</div>
+					<div>
+						<h3>2+</h3>
+						<p>front-dev</p>
+					</div>
+					<div>
+						<h3>3+</h3>
+						<p>Work on complex sysytem and stochastic theory</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+
+
+
+
+<style>
+	.page {
+		padding: 40px 6vw 120px;
+		display: grid;
+		gap: 80px;
+	}
+
+	.section-heading h1 {
+		font-family: var(--font-serif);
+		font-size: clamp(2.6rem, 5vw, 3.4rem);
+		margin: 0 0 12px;
+	}
+
+	.section-heading p {
+		margin: 0;
+		color: var(--ink-muted);
+	}
+
+	.about-card {
+		margin-top: 28px;
+		background: rgba(255, 255, 255, 0.85);
+		border-radius: var(--radius);
+		padding: 28px;
+		border: 1px solid var(--line);
+		display: grid;
+		gap: 24px;
+		box-shadow: 0 18px 40px rgba(16, 17, 20, 0.08);
+	}
+
+	.about-stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+		gap: 16px;
+	}
+
+	.about-stats h3 {
+		margin: 0 0 6px;
+		font-size: 1.4rem;
+	}
+
+	.about-stats p {
+		margin: 0;
+		color: var(--ink-muted);
+		font-size: 0.9rem;
+	}
+</style>

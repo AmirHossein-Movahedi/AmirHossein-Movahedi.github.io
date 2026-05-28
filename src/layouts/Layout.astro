@@ -1,0 +1,71 @@
+<!-- <!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Basics</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style> -->
+
+---
+// src/layouts/Layout.astro
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Personal site' } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | AmirHossein Movahedi</title>
+    <meta name="description" content={description} />
+    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+    <!-- No external fonts – system fonts only -->
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="/" class="logo">AM</a>
+        <ul class="nav-links">
+          <li><a href="/" class:list={{ active: currentPath === '/' }}>Home</a></li>
+          <li><a href="/about" class:list={{ active: currentPath === '/about/' || currentPath === '/about' }}>About</a></li>
+          <li><a href="/note" class:list={{ active: currentPath === '/note/' || currentPath === '/note' }}>Note</a></li>
+          <li><a href="/project" class:list={{ active: currentPath === '/project/' || currentPath === '/project' }}>Project</a></li>
+          <li><a href="/outside" class:list={{ active: currentPath === '/outside/' || currentPath === '/outside' }}>Outside</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="container">
+      <slot />
+    </main>
+    <footer>
+      <div class="container">
+        © {new Date().getFullYear()} AmirHossein-Movahedi
+      </div>
+    </footer>
+  </body>
+</html>
+
