@@ -1,0 +1,211 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ParticlesBackground from '../components/ParticlesBackground.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const withBase = (path) => `${base}${path}`;
+---
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+<Layout title="AmirHossein Movahedi">
+	<main class="page">
+		<header class="hero-section">
+			<!-- Particles Background -->
+			<ParticlesBackground />
+
+			<div class="hero">
+				<div class="hero-text">
+					<center>
+						<img
+							src="my.jpg"
+							alt="Amir Hossein Movahedi"
+							class="avatar"
+						/>
+					
+						<h1>Amir Hossein Movahedi</h1>
+						<p class="lead">
+							Grade student
+						</p>
+			
+						<div class="social-links">
+							<a href="https://github.com/your-github">
+								<img src="email.svg" alt="GitHub" style="width:48px; height:48px; border-radius: 50%;">
+							</a>	
+							<a href="https://github.com/your-github">
+								<img src="github.svg" alt="GitHub" style="width:48px; height:48px; border-radius: 50%;">
+							</a>	
+							<a href="https://github.com/your-github">
+								<img src="linkedin.svg" alt="GitHub" style="width:48px; height:48px; border-radius: 50%;">
+							</a>	
+
+						</div>
+					</center>
+				</div>
+			</div>
+		</header>
+		<section class="biography">
+			<p>
+				I am interested in complex systems, neuroscience, and graph theory.
+				My research focuses on understanding the principles underlying brain
+				function and developing computational models that capture neural
+				dynamics.
+			</p>
+		
+			<p>
+				I am particularly interested in the intersection of machine learning,
+				network science, and neuroscience, where mathematical tools can be
+				used to study cognition and behavior.
+			</p>
+		</section>
+</Layout>
+
+<style>
+	.page {
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+	}
+
+	.hero-section {
+		position: relative;
+		width: 100%;
+		height: 80vh;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.hero {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 48px;
+		align-items: center;
+		position: relative;
+		padding: 40px 6vw;
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+		}
+
+	.hero-text h1 {
+		font-family: serif;
+		font-size: clamp(3rem, 5vw, 4.8rem);
+		margin: 14px 0 16px;
+		letter-spacing: -0.02em;
+		color: white;
+		text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+		}
+
+	.lead {
+		font-size: 1.2rem;
+		color: rgba(255, 255, 255, 0.9);
+		max-width: 36rem;
+		text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+		}
+	.avatar {
+	width: 220px;
+	height: 220px;
+	border-radius: 50%;
+	object-fit: cover;
+	position: relative;
+	box-shadow:
+    0 0 0 4px rgba(30, 58, 138, 0.3),
+    0 0 40px rgba(30, 58, 138, 0.5);
+	z-index: 11;
+}
+
+	.social-links {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	margin: 1rem 0 1.5rem;
+}
+
+	.social-links a {
+		width: 48px;
+		height: 48px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		border-radius: 50%;
+		text-decoration: none;
+
+		color: white;
+		background: rgba(76, 117, 228, 0.15);
+
+		border: 1px solid rgba(62, 94, 183, 0.3);
+
+		backdrop-filter: blur(10px);
+
+		transition: all 0.3s ease;
+		z-index: 11;
+		
+	}
+
+	.social-links a:hover {
+		transform: translateY(-4px);
+
+		background: #1E3A8A;
+
+		box-shadow:
+			0 0 20px rgba(30, 58, 138, 0.5),
+			0 0 50px rgba(30, 58, 138, 0.25);
+	}
+
+	.social-links i {
+		font-size: 1.25rem;
+	}
+
+	.biography {
+	max-width: 900px;
+	margin:auto;
+	margin-left: 100px;
+	padding: 4rem 2rem;
+
+	font-family: 'Inter', sans-serif;
+
+	text-align: left;
+	color: #ffffff;
+
+	font-size: 1.25rem;
+	line-height: 1.9;
+
+	font-weight: 400;
+}
+
+.biography h2 {
+	font-family: 'Space Grotesk', sans-serif;
+
+	font-size: 3rem;
+	font-weight: 700;
+
+	color: #000000;
+
+	margin-bottom: 1.5rem;
+}
+
+.biography p {
+	margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+	.biography {
+		font-size: 1.1rem;
+		padding: 2rem 1.5rem;
+	}
+
+	.biography h2 {
+		font-size: 2.2rem;
+	}
+}
+
+
+
+</style>
