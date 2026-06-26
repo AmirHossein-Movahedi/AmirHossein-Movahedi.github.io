@@ -1,8 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { defineConfig } from 'astro/config';
+
+export default defineConfig({
+  base: '/amirhossein-movahedi.github.io/',
+  // ... rest of your config
+});
 ---
-
-
 <Layout title="Outside — AmirHossein Movahedi", seo={{
 	title: "Outside AmirHossein Movahedi",
 	description: "Learn about my background, interests in complex systems and neuroscience."}}>
